@@ -1,0 +1,22 @@
+.line__bottom-animation {
+  position: relative;
+  width: 120px;
+  text-align: center;
+}
+
+.line__bottom-animation::after {
+  content: "";
+  transition: all 1s ease-out;
+  position: absolute;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  border-radius: 12px;
+  background: rgb(93, 184, 93);
+}
+
+.line__bottom-animation:hover::after {
+  right: 0%;
+  left: 0%;
+}
