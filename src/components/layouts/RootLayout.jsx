@@ -6,7 +6,9 @@ export default function RootLayout() {
   return (
     <>
       <MainHeader />
-      <Outlet />
+      <main className="container mx-auto">
+        <Outlet />
+      </main>
       <MainFooter />
     </>
   );
