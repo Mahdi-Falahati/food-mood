@@ -32,4 +32,4 @@ export default function Guide() {
 }
 
 const linkStyles =
-  "flex items-center justify-center text-xl w-[170px] mx-3 py-2 text-center rounded-lg";
+  "my-2 flex items-center justify-center text-xl w-[170px] mx-3 py-2 text-center rounded-lg";
