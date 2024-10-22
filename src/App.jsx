@@ -4,10 +4,15 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import RootLayout from "./routes/RootLayout";
+import Root from "./routes/root";
+import RootLayout from "./components/layouts/RootLayout";
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route element={<RootLayout />} path="/"></Route>)
+  createRoutesFromElements(
+    <Route element={<RootLayout />} path="/">
+      <Route element={<Root />} index />
+    </Route>
+  )
 );
 
 export default function App() {
