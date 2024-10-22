@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Arima";
+  src: url("/src/assets/fonts/Arima.ttf");
+}
+
 html,
 body,
 div,
