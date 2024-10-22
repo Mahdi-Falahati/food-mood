@@ -4,7 +4,7 @@ import icon from "../../favicon.ico";
 
 export default function MainFooter() {
   return (
-    <footer className="container mx-auto mt-5 px-5">
+    <footer className="container mx-auto mt-5 px-5 pt-4 border-t border-solid border-gray-400">
       <div className="flex flex-col md:flex-row">
         <section className="basis-3/5">
           <Link to="/" className="flex items-center font-semibold text-xl">
