@@ -1,8 +1,7 @@
 import { useState } from "react";
-import NavItem from "../elements/navItem";
+import NavItem from "../elements/NavItem";
 import { MdRestaurantMenu } from "react-icons/md";
 import { CiMenuFries } from "react-icons/ci";
-import { TiHomeOutline } from "react-icons/ti";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
