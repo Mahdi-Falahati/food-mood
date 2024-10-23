@@ -1,4 +1,7 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../store/features/cartSlice";
+
 import { MdOutlineMyLocation } from "react-icons/md";
 import { TbCurrencyDollar } from "react-icons/tb";
 import { TbListDetails } from "react-icons/tb";
@@ -7,7 +10,10 @@ import { LiaCartPlusSolid } from "react-icons/lia";
 import { IoArrowRedoOutline } from "react-icons/io5";
 
 export default function FoodDetails() {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
+  const data = useLoaderData();
+
   const {
     id,
     name,
@@ -17,8 +23,11 @@ export default function FoodDetails() {
     details,
     ingredients,
     recipe,
-  } = useLoaderData();
+  } = data;
 
+  const clickHandler = () => {
+    dispatch(addToCart(data));
+  };
   return (
     <div>
       <div className="flex flex-col sm:flex-row justify-center items-center">
@@ -102,7 +111,10 @@ export default function FoodDetails() {
           <IoArrowRedoOutline className="mr-2 text-2xl" />
           Back
         </button>
-        <button className="shadow-md shadow-slate-400 bg-gradient-to-r hover:scale-95 hover:to-green-600 hover:from-yellow-400 to-yellow-400 from-green-600 my-2 w-[250px] flex justify-center items-center transition-colors rounded-md text-white tracking-widest font-bold text-center py-3">
+        <button
+          onClick={clickHandler}
+          className="shadow-md shadow-slate-400 bg-gradient-to-r hover:scale-95 hover:to-green-600 hover:from-yellow-400 to-yellow-400 from-green-600 my-2 w-[250px] flex justify-center items-center transition-colors rounded-md text-white tracking-widest font-bold text-center py-3"
+        >
           Add to Cart
           <LiaCartPlusSolid className="ml-2 text-2xl" />
         </button>
