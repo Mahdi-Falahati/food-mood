@@ -19,18 +19,15 @@ const cartSlice = createSlice({
       }
     },
 
-    incrementCount(state, action) {},
     removeFromCart(state, action) {
-      const filtered = state.shoppingCart.filter((item) => {
-        if (item.id === action.payload) {
-          if (item.count >= 2) {
-            item.count--;
-          }
-        } else {
-          return item;
-        }
-      });
-      state.shoppingCart = filtered;
+      const index = state.shoppingCart.findIndex(
+        (item) => item.id === action.payload
+      );
+      if (state.shoppingCart[index].count > 1) {
+        state.shoppingCart[index].count -= 1;
+      } else {
+        state.shoppingCart.splice(index, 1);
+      }
     },
 
     clearCart(state) {
