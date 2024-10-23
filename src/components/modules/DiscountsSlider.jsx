@@ -30,7 +30,6 @@ export default function DiscountsSlider({ data }) {
         className="mySwiper"
       >
         {data?.map((item, i) => {
-          console.log(item);
           return (
             <>
               <SwiperSlide key={i}>
