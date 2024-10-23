@@ -1,8 +1,7 @@
-import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/effect-cube";
 import "swiper/css/pagination";
-import { EffectCube, Pagination } from "swiper/modules";
+import { Autoplay, EffectCube, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { RiLinksFill } from "react-icons/ri";
 
@@ -10,6 +9,10 @@ export default function DiscountsSlider({ data }) {
   return (
     <div className="w-[260px] md:w-[380px] mb-20">
       <Swiper
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         effect={"cube"}
         grabCursor={true}
         slidesPerView={1}
@@ -23,7 +26,7 @@ export default function DiscountsSlider({ data }) {
         pagination={{
           clickable: true,
         }}
-        modules={[EffectCube, Pagination]}
+        modules={[EffectCube, Pagination, Autoplay]}
         className="mySwiper"
       >
         {data?.map((item, i) => {
