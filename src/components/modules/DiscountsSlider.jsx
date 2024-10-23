@@ -35,7 +35,7 @@ export default function DiscountsSlider({ data }) {
               <SwiperSlide key={i}>
                 <div className="relative">
                   <img
-                    src={`/src/assets/images/${item.id}.jpeg`}
+                    src={`/public/${item.id}.jpeg`}
                     className="rounded-2xl"
                   />
                   <div
