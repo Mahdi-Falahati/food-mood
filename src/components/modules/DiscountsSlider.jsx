@@ -5,6 +5,9 @@ import { Autoplay, EffectCube, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { RiLinksFill } from "react-icons/ri";
 import { Images } from "../constant/Images";
+import img1 from "../../assets/images/1.jpeg";
+import img10 from "../../assets/images/10.jpeg";
+import img15 from "../../assets/images/1.jpeg";
 
 export default function DiscountsSlider({ data }) {
   console.log(Images);
@@ -36,7 +39,7 @@ export default function DiscountsSlider({ data }) {
             <>
               <SwiperSlide key={i}>
                 <div className="relative">
-                  <img src={Images[item.id - 1]} className="rounded-2xl" />
+                  <img src={img1} className="rounded-2xl" />
                   <div
                     className="text-white absolute top-0 z-10 px-2 py-3 left-0 right-0 rounded-t-2xl font-semibold tracking-wider"
                     style={{ background: "#00000085" }}
