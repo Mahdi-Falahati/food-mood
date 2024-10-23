@@ -7,12 +7,14 @@ import {
 import Root from "./routes/root";
 import RootLayout from "./components/layouts/RootLayout";
 import Discounts from "./routes/discounts";
+import Menu from "./routes/menu";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<RootLayout />} path="/">
       <Route element={<Root />} index />
       <Route element={<Discounts />} path="/discunts" />
+      <Route element={<Menu />} path="/menu" />
     </Route>
   )
 );
