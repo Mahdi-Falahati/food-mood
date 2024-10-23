@@ -9,6 +9,7 @@ import RootLayout from "./components/layouts/RootLayout";
 import Discounts from "./routes/discounts";
 import Menu from "./routes/menu";
 import Categories from "./routes/categories";
+import FoodDetails from "./routes/foodDetails";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
       <Route element={<Discounts />} path="/discunts" />
       <Route element={<Menu />} path="/menu" />
       <Route element={<Categories />} path="/categories" />
+      <Route element={<FoodDetails />} path="/menu/:foodId" />
     </Route>
   )
 );
