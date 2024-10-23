@@ -18,7 +18,16 @@ const router = createBrowserRouter(
       <Route element={<Discounts />} path="/discunts" />
       <Route element={<Menu />} path="/menu" />
       <Route element={<Categories />} path="/categories" />
-      <Route element={<FoodDetails />} path="/menu/:foodId" />
+      <Route
+        element={<FoodDetails />}
+        path="/menu/:foodId"
+        loader={async ({ params }) => {
+          const res = await fetch(
+            "http://api-rcfood.vercel.app/data/" + params.foodId
+          );
+          return res.json();
+        }}
+      />
     </Route>
   )
 );
