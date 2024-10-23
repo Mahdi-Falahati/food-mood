@@ -5,7 +5,7 @@ import { Autoplay, EffectCube, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 import { RiLinksFill } from "react-icons/ri";
 import { Images } from "../constant/Images";
-import img1 from "../../assets/images/1.jpeg";
+import img1 from "../../assets/images/img1.jpeg";
 import img10 from "../../assets/images/10.jpeg";
 import img15 from "../../assets/images/1.jpeg";
 
