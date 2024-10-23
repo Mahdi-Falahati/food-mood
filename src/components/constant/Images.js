@@ -14,7 +14,7 @@ import img13 from "../../assets/images/13.jpeg";
 import img14 from "../../assets/images/14.jpeg";
 import img15 from "../../assets/images/15.jpeg";
 
-export default images = [
+export const Images = [
   img1,
   img2,
   img3,
