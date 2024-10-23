@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import icon from "/src/favicon.ico";
 import Menu from "../elements/Menu";
+import ShoppingCart from "./ShoppingCart";
 
 export default function MainHeader() {
   return (
@@ -13,6 +14,7 @@ export default function MainHeader() {
         <img src={icon} className="mx-2 h-7" alt="Food" />
         Mood
       </Link>
+      <ShoppingCart />
       <nav className="text-2xl font-semibold">
         <Menu />
       </nav>
