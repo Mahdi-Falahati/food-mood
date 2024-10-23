@@ -9,15 +9,17 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart(state, action) {
-      state.shoppingCart.forEach((item) => {
-        if (item.id === action.payload.id) {
-          item.count++;
-        } else {
-          state.shoppingCart.push({ ...item, count: 1 });
-        }
-      });
+      const index = state.shoppingCart.findIndex(
+        (item) => item.id === action.payload.id
+      );
+      if (index !== -1) {
+        state.shoppingCart[index].count += 1;
+      } else {
+        state.shoppingCart.push({ ...action.payload, count: 1 });
+      }
     },
 
+    incrementCount(state, action) {},
     removeFromCart(state, action) {
       const filtered = state.shoppingCart.filter((item) => {
         if (item.id === action.payload) {
