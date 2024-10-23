@@ -2,6 +2,7 @@ import { useState } from "react";
 import NavItem from "../elements/navItem";
 import { MdRestaurantMenu } from "react-icons/md";
 import { CiMenuFries } from "react-icons/ci";
+import { TiHomeOutline } from "react-icons/ti";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
@@ -9,7 +10,7 @@ export default function Menu() {
   const renderLinks = navItems.map((item, i) => (
     <NavItem
       route={item.title ? item.title.toLowerCase() : item.toLowerCase()}
-      title={item.title ? item.title.toLowerCase() : item.toLowerCase()}
+      title={item.title ? item.title : item}
       icon={item.icon ? item.icon : ""}
       key={i}
     />
