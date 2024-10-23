@@ -24,7 +24,7 @@ export default function Menu() {
           <CiMenuFries />
         </button>
         {open && (
-          <div className="fixed top-[65px] h-[200px] left-0 right-0 bg-white flex flex-col justify-around items-center">
+          <div className="z-40 absolute top-[65px] h-[200px] left-0 right-0 bg-white flex flex-col justify-around items-center">
             {renderLinks}
           </div>
         )}
