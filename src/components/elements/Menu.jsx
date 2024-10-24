@@ -35,5 +35,5 @@ export default function Menu() {
 const navItems = [
   { title: "Menu", icon: <MdRestaurantMenu className="mr-1" /> },
   "Categories",
-  "Discunts",
+  "Discounts",
 ];

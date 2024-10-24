@@ -24,7 +24,7 @@ export default function Guide() {
         to="/discounts"
         className={`${linkStyles} bg-purple-600 hover:scale-105 hover:bg-purple-700`}
       >
-        Discount
+        Discounts
         <TbRosetteDiscount className="ml-2 text-2xl" />
       </Link>
     </section>
