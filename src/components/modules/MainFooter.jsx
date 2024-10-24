@@ -46,4 +46,4 @@ export default function MainFooter() {
   );
 }
 
-const items = ["Menu", "Categories", "Discunts"];
+const items = ["Menu", "Categories", "Discounts"];
