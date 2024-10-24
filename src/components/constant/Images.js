@@ -13,6 +13,9 @@ import img12 from "/src/assets/images/12.jpeg";
 import img13 from "/src/assets/images/13.jpeg";
 import img14 from "/src/assets/images/14.jpeg";
 import img15 from "/src/assets/images/15.jpeg";
+import search from "/src/assets/images/search.png";
+
+export const Search = search;
 
 export const Images = [
   img1,
