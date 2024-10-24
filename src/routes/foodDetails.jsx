@@ -1,6 +1,7 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../store/features/cartSlice";
+import { Images } from "../components/constant/Images";
 
 import { MdOutlineMyLocation } from "react-icons/md";
 import { TbCurrencyDollar } from "react-icons/tb";
@@ -32,7 +33,7 @@ export default function FoodDetails() {
     <div>
       <div className="flex flex-col sm:flex-row justify-center items-center">
         <img
-          src={`/src/assets/images/${id}.jpeg`}
+          src={Images[id - 1]}
           alt={name}
           className="w-[200px] md:w-[350px] rounded-md my-4"
         />

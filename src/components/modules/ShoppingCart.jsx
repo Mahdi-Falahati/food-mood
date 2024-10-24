@@ -7,6 +7,7 @@ import {
   clearCart,
   removeFromCart,
 } from "../../store/features/cartSlice";
+import { Images } from "../constant/Images";
 
 export default function ShoppingCart() {
   const food = useSelector((state) => state.cart.shoppingCart);
@@ -46,7 +47,7 @@ export default function ShoppingCart() {
                 <div className="flex flex-col my-5 shadow-md shadow-slate-400 rounded-md">
                   <div className="flex">
                     <img
-                      src={`/src/assets/images/${item.id}.jpeg`}
+                      src={Images[item.id - 1]}
                       className="h-[60px] rounded-lg"
                     />
                     <div className="flex flex-col h-[60px] ml-2 justify-around">
