@@ -10,7 +10,7 @@ export default function MainFooter() {
           <Link to="/" className="flex items-center font-semibold text-xl">
             Food
             <img src={icon} alt="food-mood" className="mx-1 h-[22px]" />
-            Mood
+            Moody
           </Link>
           <p className="mt-3 font-semibold text-justify tracking-wide leading-5">
             Proident do officia consequat nostrud id esse. Fugiat velit

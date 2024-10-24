@@ -12,7 +12,7 @@ export default function MainHeader() {
       >
         Food
         <img src={icon} className="mx-2 h-7" alt="Food" />
-        Mood
+        Moody
       </Link>
       <ShoppingCart />
       <nav className="text-2xl font-semibold">
