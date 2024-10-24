@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { PiEyesFill } from "react-icons/pi";
 import { TbShoppingCartDiscount } from "react-icons/tb";
 import { PiLink } from "react-icons/pi";
+import { Images } from "../constant/Images";
 
 export default function Card({ data }) {
   const { id, name, price, details, discount } = data;
@@ -11,7 +12,7 @@ export default function Card({ data }) {
     <div className="m-5 w-[250px] shadow-md shadow-slate-400 rounded-lg pt-1 pb-3">
       <div className="relative flex justify-center">
         <img
-          src={`/src/assets/images/${id}.jpeg`}
+          src={Images[id - 1]}
           alt={name}
           className="h-[155px] w-[242px] rounded-md shadow-md shadow-slate-500"
         />

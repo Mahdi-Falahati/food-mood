@@ -6,7 +6,7 @@ import { IoArrowRedoOutline } from "react-icons/io5";
 export default function HeaderContent() {
   return (
     <div className="flex justify-around items-center flex-wrap">
-      <img src={banner} alt="food" className="" />
+      <img src={banner} alt="food" />
       <section className="w-full md:w-[500px] my-6">
         <h2 className="text-2xl font-bold">Food Mood</h2>
         <p className="text-sm font-semibold tracking-wider">
