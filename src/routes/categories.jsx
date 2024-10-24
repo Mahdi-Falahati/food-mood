@@ -5,6 +5,7 @@ import { MdSavedSearch } from "react-icons/md";
 import { useSearchParams } from "react-router-dom";
 import Card from "../components/elements/Card";
 import filtering from "../components/filtering";
+import search from "../assets/images/search.png";
 
 export default function Categories() {
   const [query, setQuery] = useState({ difficulty: "", time: "" });
@@ -72,11 +73,7 @@ export default function Categories() {
       </div>
       <div className="flex justify-around items-center my-5 flex-wrap">
         {!data.length ? (
-          <img
-            src="/src/assets/images/search.png"
-            alt="search food"
-            className="max-h-[300px]"
-          />
+          <img src={search} alt="search food" className="max-h-[300px]" />
         ) : null}
         {data.map((food) => (
           <Card key={food.id} data={food} />
