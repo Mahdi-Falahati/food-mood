@@ -10,10 +10,11 @@ import Discounts from "./routes/discounts";
 import Menu from "./routes/menu";
 import Categories from "./routes/categories";
 import FoodDetails from "./routes/foodDetails";
+import ErrorPage from "./routes/errorPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route element={<RootLayout />} path="/">
+    <Route element={<RootLayout />} path="/" errorElement={<ErrorPage />}>
       <Route element={<Root />} index />
       <Route element={<Discounts />} path="/discounts" />
       <Route element={<Menu />} path="/menu" />
